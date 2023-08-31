@@ -13,21 +13,82 @@
 
     <!-- tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="font-inter bg-slate-200">
 
-    <header>
-        <h1>blog</h1>
-    </header>
+    <!-- Q&A section start -->
+    <section class="container mx-auto p-4">
+        <div class="mb-10 md:mb-16">
+            <h2 class="text-3xl">1. Discuss the scope of var, let, and const.</h2>
+            <p class="mt-2 text-justify"> <span class="text-lg font-medium">Ans:</span> The scope of var, let, and const
+                refers to
+                the extent of
+                the code where these variables can be accessed
+                or declared. var
+                is function scoped, meaning it can only be accessed within the function where it is declared, or
+                globally if it is
+                declared outside any function. let and const are block scoped, meaning they can only be accessed within
+                the block where
+                they are declared, such as an if statement or a loop. const differs from let and var in that it cannot
+                be reassigned a
+                new value after declaration. For more information, you can visit these websites: <a
+                    class="hover:text-blue-700"
+                    href="https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/">How the let,
+                    const, and
+                    var Keywords
+                    Work in JavaScript - freeCodeCamp.org</a> , <a class="hover:text-blue-700"
+                    href="https://andy-carter.com/blog/variable-scope-in-modern-javascript">Variable Scope in Modern
+                    JavaScript
+                    with var</a>.</p>
+        </div>
+        <div class="mb-8">
+            <h2 class="text-3xl">2. Tell us the use cases of null and undefined.</h2>
+            <p class="mt-2 text-justify"><span class="text-lg font-medium">Ans:</span> null and undefined are two of the
+                primitive values in JavaScript that represent the absence of a meaningful value. They
+                can be used for different purposes depending on the context. null is used to indicate that a variable
+                has been
+                explicitly assigned no value, or that an object property or an array element does not exist. undefined
+                is used to
+                indicate that a variable has not been declared, or that an object property or an array element has not
+                been assigned any
+                value, or that a function parameter has not been provided, or that a function does not return any value.
+                For more
+                information, you can visit these websites: <a class="hover:text-blue-700"
+                    href="https://stackoverflow.com/questions/6604749/what-reason-is-there-to-use-null-instead-of-undefined-in-javascript">What
+                    reason is there to use null instead of undefined in
+                    JavaScript? - Stack
+                    Overflow</a>
+                , <a class="hover:text-blue-700"
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null">null -
+                    JavaScript | MDN - MDN Web Docs</a> .</p>
+        </div>
+        <div class="mb-8">
+            <h2 class="text-3xl">3. What do you mean by REST API?</h2>
+            <p class="mt-2 text-justify"><span class="text-lg font-medium">Ans:</span> REST API stands for
+                Representational State Transfer Application Programming Interface. It is a style of web API that
+                follows certain design principles and conventions to allow applications and servers to communicate and
+                exchange data
+                using HTTP methods. A REST API typically exposes resources (such as data, content, media, etc.) through
+                uniform resource
+                identifiers (URIs) that can be accessed and manipulated by clients using HTTP methods such as GET, POST,
+                PUT, PATCH,
+                DELETE, etc. A REST API also supports different data formats for the request and response bodies, such
+                as JSON, XML,
+                HTML, etc. For more information, you can visit these websites:<a class="hover:text-blue-700"
+                    href="https://blog.postman.com/rest-api-examples/">What Is a REST API? Examples, Uses &
+                    Challenges | Postman
+                    Blog</a> ,<a class="hover:text-blue-700" href="https://www.ibm.com/topics/rest-apis">What is a REST
+                    API? | IBM</a> .
 
-    <main>
-
-    </main>
-
-    <footer>
-
-    </footer>
+        </div>
+    </section>
 
 </body>
 

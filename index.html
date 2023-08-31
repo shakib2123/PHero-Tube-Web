@@ -17,24 +17,50 @@
     <!-- tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="font-inter">
 
     <!-- header section start -->
     <header>
-
+        <nav class="navbar bg-base-100 items-center container mx-auto py-4 border-b-2">
+            <div class="navbar-start">
+                <img class="w-24 md:w-52" src="./images/Logo.png" alt="image not found">
+            </div>
+            <div class="navbar-center">
+                <button class="btn bg-gray-300 rounded-lg hover:text-white hover:bg-[#FF1F3D]">Sort by
+                    view</button>
+            </div>
+            <div class="navbar-end">
+                <a target="_blank" href="./blog.html"><button
+                        class="btn bg-[#FF1F3D] hover:bg-[#da001d] text-white rounded-lg">Blog</button></a>
+            </div>
+        </nav>
     </header>
 
     <!-- main section start -->
-    <main>
+    <main class="container mx-auto">
 
+        <!-- category section -->
+        <section class="my-5">
+            <div id="category-container" class="flex flex-col md:flex-row justify-center items-center">
+
+            </div>
+        </section>
+
+        <!-- card section  -->
+        <section>
+            <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            </div>
+        </section>
     </main>
 
-    <!-- footer section start -->
-    <footer>
-
-    </footer>
 
     <!-- javaScript file link -->
     <script src="./js/index.js"></script>
