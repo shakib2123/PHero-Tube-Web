@@ -8,7 +8,7 @@ const handleCategory = async () => {
   data.data.forEach((category) => {
     const categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-      <button onclick="handleCardData('${category?.category_id}')" class="btn bg-gray-300 hover:bg-[#FF1F3D] hover:text-white mx-5 rounded-lg my-1">${category?.category}</button>
+      <button onclick="handleCardData('${category?.category_id}')" class="btn bg-gray-300 hover:bg-[#FF1F3D] hover:text-white mx-2 md:mx-5 rounded-lg my-1">${category?.category}</button>
       `;
     categoryContainer.appendChild(categoryDiv);
   });
@@ -66,7 +66,7 @@ const handleCardData = async (categoryId = 1000) => {
             }${minutes ? `${minutes} min ago` : ""}</span></div>
 
        </div>
-      <div class="card-body">
+      <div class="card-body px-0">
         <div class="flex space-x-3">
 
             <img class="rounded-full w-14 h-14" src="${
@@ -100,7 +100,7 @@ const handleCardData = async (categoryId = 1000) => {
                 }" alt="Shoes" />
         
             </div>
-            <div class="card-body">
+            <div class="card-body px-0">
                 <div class="flex space-x-3">
                     <img class="rounded-full w-14 h-14" src="${
                       card?.authors[0]?.profile_picture
@@ -182,7 +182,7 @@ const sortDataLoad = async () => {
             }${minutes ? `${minutes} min ago` : ""}</span></div>
 
        </div>
-      <div class="card-body">
+      <div class="card-body px-0">
         <div class="flex space-x-3">
           <img class="rounded-full w-14 h-14" src="${
             card?.authors[0]?.profile_picture
@@ -214,7 +214,7 @@ const sortDataLoad = async () => {
                 }" alt="Shoes" />
         
             </div>
-            <div class="card-body">
+            <div class="card-body px-0">
                 <div class="flex space-x-3">
                     <img class="rounded-full w-14 h-14" src="${
                       card?.authors[0]?.profile_picture
