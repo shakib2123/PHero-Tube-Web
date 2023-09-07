@@ -53,17 +53,20 @@ const handleCardData = async (categoryId = 1000) => {
 
       const cardDiv = document.createElement("div");
 
-      if (hours && minutes) {
-        cardDiv.innerHTML = `
+      cardDiv.innerHTML = `
     <div class="card bg-base-100">
       <div>
         <img class="w-full h-52 rounded-xl" src="${
           card?.thumbnail
         }" alt="Shoes" />
 
-            <div class="relative -mt-[12%] flex justify-end  bg-transparent"><span class="p-1 Auto me-2 rounded-lg bg-black text-white">${
-              hours ? `${hours} hour ` : ""
-            }${minutes ? `${minutes} min ago` : ""}</span></div>
+            <div class="relative -mt-[12%] flex justify-end  bg-transparent">${
+              card?.others?.posted_date
+                ? `<span class="p-1 Auto me-2 rounded-lg bg-black text-white">${
+                    hours ? `${hours} hour ` : ""
+                  }${minutes ? `${minutes} min ago` : ""}</span>`
+                : ""
+            }</div>
 
        </div>
       <div class="card-body px-0">
@@ -91,39 +94,6 @@ const handleCardData = async (categoryId = 1000) => {
       </div>
     </div>
   `;
-      } else {
-        cardDiv.innerHTML = `
-        <div class="card bg-base-100">
-            <div>
-                <img class="w-full h-52 rounded-xl" src="${
-                  card?.thumbnail
-                }" alt="Shoes" />
-        
-            </div>
-            <div class="card-body px-0">
-                <div class="flex space-x-3">
-                    <img class="rounded-full w-14 h-14" src="${
-                      card?.authors[0]?.profile_picture
-                    }" />
-                    <h2 class="card-title">${card?.title}</h2>
-                </div>
-                <div class="card-footer ml-16 space-y-2">
-                    <div class="flex space-x-2 items-center">
-                        <h6>${card?.authors[0]?.profile_name}</h6>
-                        <div>
-                            ${
-                              card?.authors[0]?.verified
-                                ? `<img src="./images/blueTick.png">`
-                                : ""
-                            }
-                        </div>
-                    </div>
-                    <h6>${card?.others?.views} views</h6>
-                </div>
-            </div>
-        </div>
-        `;
-      }
 
       cardContainer.appendChild(cardDiv);
     });
@@ -169,24 +139,29 @@ const sortDataLoad = async () => {
 
       const cardDiv = document.createElement("div");
 
-      if (hours && minutes) {
-        cardDiv.innerHTML = `
+      cardDiv.innerHTML = `
     <div class="card bg-base-100">
       <div>
         <img class="w-full h-52 rounded-xl" src="${
           card?.thumbnail
         }" alt="Shoes" />
 
-            <div class="relative -mt-[12%] flex justify-end  bg-transparent"><span class="p-1 Auto me-2 rounded-lg bg-black text-white">${
-              hours ? `${hours} hour ` : ""
-            }${minutes ? `${minutes} min ago` : ""}</span></div>
+            <div class="relative -mt-[12%] flex justify-end  bg-transparent">${
+              card?.others?.posted_date
+                ? `<span class="p-1 Auto me-2 rounded-lg bg-black text-white">${
+                    hours ? `${hours} hour ` : ""
+                  }${minutes ? `${minutes} min ago` : ""}</span>`
+                : ""
+            }</div>
 
        </div>
       <div class="card-body px-0">
         <div class="flex space-x-3">
-          <img class="rounded-full w-14 h-14" src="${
-            card?.authors[0]?.profile_picture
-          }" />
+
+            <img class="rounded-full w-14 h-14" src="${
+              card?.authors[0]?.profile_picture
+            }" />
+
           <h2 class="card-title">${card?.title}</h2>
         </div>
         <div class="card-footer ml-16 space-y-2">
@@ -205,39 +180,6 @@ const sortDataLoad = async () => {
       </div>
     </div>
   `;
-      } else {
-        cardDiv.innerHTML = `
-        <div class="card bg-base-100">
-            <div>
-                <img class="w-full h-52 rounded-xl" src="${
-                  card?.thumbnail
-                }" alt="Shoes" />
-        
-            </div>
-            <div class="card-body px-0">
-                <div class="flex space-x-3">
-                    <img class="rounded-full w-14 h-14" src="${
-                      card?.authors[0]?.profile_picture
-                    }" />
-                    <h2 class="card-title">${card?.title}</h2>
-                </div>
-                <div class="card-footer ml-16 space-y-2">
-                    <div class="flex space-x-2 items-center">
-                        <h6>${card?.authors[0]?.profile_name}</h6>
-                        <div>
-                            ${
-                              card?.authors[0]?.verified
-                                ? `<img src="./images/blueTick.png">`
-                                : ""
-                            }
-                        </div>
-                    </div>
-                    <h6>${card?.others?.views} views</h6>
-                </div>
-            </div>
-        </div>
-        `;
-      }
 
       cardContainer.appendChild(cardDiv);
     });
